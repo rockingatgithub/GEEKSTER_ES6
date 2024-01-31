@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        console.log("global this", this)
+
+        function normal () {
+            console.log("this is normal func.", this)
+        }
+
+        const funcExp1 = function named () { console.log("this is named func. exp.", this)  }
+
+        const funcExp2 = function () { console.log("this in anonymous func. exp", this) }
+
+        const arrowFunc = () => { console.log("this in arrow function") 
+        }
+
+    </script>
+    
+</body>
+</html>
