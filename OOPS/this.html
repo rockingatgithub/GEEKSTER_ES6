@@ -9,6 +9,8 @@
 
     <script>
 
+        'use strict'
+
         console.log("global this", this)
 
         function normal () {
@@ -19,8 +21,29 @@
 
         const funcExp2 = function () { console.log("this in anonymous func. exp", this) }
 
-        const arrowFunc = () => { console.log("this in arrow function") 
+        const arrowFunc = () => { console.log("this in arrow function", this) 
         }
+
+        // normal()
+
+        funcExp1()
+
+        funcExp2()
+
+        arrowFunc()
+
+
+
+        let obj = {
+            name: "Sudhendra Singh",
+            roll: 100,
+            getName: function () { console.log("The name is: ", this) }
+        }
+
+        obj.getName()
+
+        normal.apply(obj)
+
 
     </script>
     
