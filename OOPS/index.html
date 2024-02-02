@@ -9,20 +9,40 @@
 
     <script>
 
-        function student (name, className, age) {
-            const obj = { 
-                name: name, 
-                class: className, 
-                age: age,
-                getName: function () { console.log(this.name) }  
-            }
-            return obj;
+        'use strict';
+
+        // function student (name, className, age) {
+        //     const obj = { 
+        //         name: name, 
+        //         class: className, 
+        //         age: age,
+        //         getName: function () { console.log(this.name) }  
+        //     }
+        //     return obj;
+        // }
+
+        // const student1 = student("SS", 10, 20)
+        // const student2 = student("Geekster", 20, 30)
+
+        // console.log(student1, student2)
+
+
+        function Student (name, className, age) {
+
+            this.name = name;
+            this.className = className;
+            this.age = age
+            this.getAge = function () { console.log("The student age is", this.age) }
         }
 
-        const student1 = student("SS", 10, 20)
-        const student2 = student("Geekster", 20, 30)
+        Student.prototype.getName = function () { console.log("The student name is", this.name) }
 
-        console.log(student1, student2)
+
+        const Student1 = new Student("Sudhednra", 'X', 10)
+        const Student2 = new Student("Geekster", 'XI', 20)
+
+
+
 
 
 

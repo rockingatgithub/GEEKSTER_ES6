@@ -13,8 +13,8 @@
 
         console.log("global this", this)
 
-        function normal () {
-            console.log("this is normal func.", this)
+        function normal (a, b) {
+            console.log("this is normal func.", this, a, b)
         }
 
         const funcExp1 = function named () { console.log("this is named func. exp.", this)  }
@@ -42,7 +42,29 @@
 
         obj.getName()
 
-        normal.apply(obj)
+        // normal.apply(obj, [1, 2])
+
+        // normal.call(obj, 1, 2)
+
+        // normal.apply(obj, [3, 4])
+
+        const bindedFunc = normal.bind(obj)
+
+        // bindedFunc(1, 2)
+        // bindedFunc(3, 4)
+
+
+
+
+
+
+
+
+        // funcExp2.apply(obj)
+
+        // funcExp1.apply(obj)
+
+        // arrowFunc.apply(obj)
 
 
     </script>
